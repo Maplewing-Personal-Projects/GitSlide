@@ -151,6 +151,36 @@
           git commit -a
         \end{block}
       \end{frame}
+      
+      \begin{frame}{檔案管理}
+        \begin{itemize}
+          \item Git會管理空檔案，但不理會空資料夾。
+        \end{itemize}
+        \begin{block}{改名檔案或是移動檔案}
+          git mv code.c code.cpp
+        \end{block}
+        \begin{block}{刪除檔案}
+          git rm code.c
+        \end{block}
+      \end{frame}
+      
+      \begin{frame}{.gitignore}
+        \begin{itemize}
+          \item 告訴Git哪些檔案不用加入。
+          \item \url{https://github.com/github/gitignore}：這裡有大部分專案的.gitignore template可以參考。
+        \end{itemize}
+      \end{frame}
+      
+      \begin{frame}{狀態與紀錄}
+        \begin{block}{觀看目前狀態}
+          git status
+        \end{block}
+        \begin{block}{觀看commit紀錄}
+          git log\\
+          git log --oneline\\
+          git log --oneline --decorate --graph
+        \end{block}
+      \end{frame}
     \end{subsection}
    \end{section}
 
