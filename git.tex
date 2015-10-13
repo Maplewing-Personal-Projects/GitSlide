@@ -1,9 +1,10 @@
-\documentclass[pdf,15pt]{beamer}
+\documentclass[pdf,16pt]{beamer}
 \mode<presentation>{\usetheme{Warsaw}}
 \usepackage{fontspec}   %加這個就可以設定字體
 \usepackage{xeCJK}       %讓中英文字體分開設置
 
 %
+\usepackage{listings}
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \setCJKmainfont{LiHei Pro} %設定中文為系統上的字型，而英文不去更動，使用原TeX字型
@@ -93,6 +94,62 @@
           \item 非線性開發
           \item 分散式開發
         \end{itemize}
+      \end{frame}
+      
+      \begin{frame}{安裝Git}
+        \begin{itemize}
+          \item 安裝Git
+          \begin{itemize}
+            \item \url{https://help.github.com/articles/set-up-git/}
+          \end{itemize}
+          \item 安裝Git GUI
+          \begin{itemize}
+            \item GitX (Mac OS X)
+            \item TortoiseGit (Windows)
+          \end{itemize}
+        \end{itemize}
+      \end{frame}
+    \end{subsection}
+    
+    \begin{subsection}{使用教學}
+      \begin{frame}{設定Git}
+        \begin{block}{設定名稱}
+          git config -\phantom{}-global user.name "Maplewing"
+        \end{block}
+        \begin{block}{設定Email}
+          git config -\phantom{}-global user.email "sinmaplewing@gmail.com"
+        \end{block}
+      \end{frame}
+      
+      \begin{frame}{建立一個Git Repository}
+        \begin{itemize}
+          \item Repository(倉庫)：版本控制系統的管轄之下的儲存位置。
+          \item 有兩種方法可以建立Git Repo：
+        \end{itemize}
+        \begin{block}{創建新的Git Repo}
+          git init
+        \end{block}
+        \begin{block}{複製一個現有的Git Repo}
+          git clone \url{https://github.com/sinmaplewing/Mini_Monopoly.git}
+        \end{block}
+      \end{frame}
+      
+      \begin{frame}{加入檔案}
+        \begin{figure}[h!]
+          \includegraphics[width=0.8\textwidth]{images/004.jpg} 
+          \caption{加入檔案流程}
+        \end{figure}
+      \end{frame}
+      
+      \begin{frame}{加入檔案}
+        \begin{block}{加入檔案進入Stage}
+          git add code.c
+          git add .
+        \end{block}
+        \begin{block}{將變更記錄送入Repo}
+          git commit -m "Add Code.c"
+          git commit -a
+        \end{block}
       \end{frame}
     \end{subsection}
    \end{section}
