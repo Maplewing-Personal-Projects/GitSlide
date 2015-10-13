@@ -177,11 +177,99 @@
         \end{block}
         \begin{block}{觀看commit紀錄}
           git log\\
-          git log --oneline\\
-          git log --oneline --decorate --graph
+          git log -\phantom{}-oneline\\
+          git log -\phantom{}-oneline -\phantom{}-decorate -\phantom{}-graph
+        \end{block}
+        \begin{block}{觀看差別}
+          git diff
         \end{block}
       \end{frame}
+      
+      \begin{frame}{復原檔案}
+        \begin{block}{復原至上次commit的內容}
+          git checkout HEAD\textasciicircum\\
+          git checkout HEAD\textasciicircum\phantom{} code.c
+        \end{block}
+        \begin{block}{將檔案變回unstage狀態，不更動檔案}
+          git reset HEAD code.c
+        \end{block}
+      \end{frame}
+      
+      \begin{frame}{使用分支}
+        \begin{itemize}
+          \item 預設分支為master
+        \end{itemize}
+        \begin{block}{查看目前分支}
+          git branch
+        \end{block}
+        \begin{block}{創建新分支並移過去}
+          git checkout -b newbranch
+        \end{block}
+        \begin{block}{移動分支}
+          git checkout master
+        \end{block}
+        \begin{block}{合併指定分支到目前所在分支}
+          git merge newbranch
+        \end{block}
+        
+      \end{frame}
+      
     \end{subsection}
    \end{section}
-
+   
+   \begin{section}{Github}
+    \begin{subsection}{簡介}
+      \begin{frame}{Github}
+        \begin{figure}[h!]
+          \includegraphics[width=0.8\textwidth]{images/005.png} 
+          \caption{Github}
+        \end{figure}
+      \end{frame}
+      
+      \begin{frame}{Github}
+        \begin{itemize}
+          \item 線上的Repository
+          \item 可創建Repo、fork Repo或是共同合作
+        \end{itemize}
+      \end{frame}
+    \end{subsection}
+    
+    \begin{subsection}{使用說明}
+      \begin{frame}{使用Github}
+        \begin{block}{設定Remote}
+          git remote add origin \url{Repo_url}
+        \end{block}
+        
+        \begin{block}{將Local的變更推到Remote上}
+          git push -u origin master
+        \end{block}
+        
+        \begin{block}{將Remote的變更拉到Local上}
+          git pull\\
+          git pull origin master
+        \end{block}
+        
+      \end{frame}
+      
+      \begin{frame}{Demo}
+        Demo!
+      \end{frame}
+     
+    \end{subsection}
+    
+   \end{section}
+   
+   \begin{section}{參考資料}
+    \begin{subsection}{參考資料}
+      \begin{frame}{參考資料}
+        \begin{itemize}
+          \item Git in a Nutshell: \url{http://www.slideshare.net/Dannvix/git-in-a-nutshell}
+          \item Git \& Github: \url{http://www.slideshare.net/ihower/git-and-github-7306407}
+          \item 連猴子都能懂的Git入門指南: \url{https://backlogtool.com/git-guide/tw/}
+          \item Git 版本控制系統| ihower 的Git 教室: \url{https://ihower.tw/git/}
+          \item Git 初學筆記 - 指令操作教學: \url{http://blog.longwin.com.tw/2009/05/git-learn-initial-command-2009/}
+        \end{itemize}
+      \end{frame}
+     \end{subsection}
+   \end{section}
 \end{document}
